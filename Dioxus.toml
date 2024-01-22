@@ -23,6 +23,8 @@ title = "family_manage"
 # when watcher trigger, regenerate the `index.html`
 reload_html = true
 
+# if miss this property, the router will lose efficacy
+index_on_404 = true
 # which files or dirs will be watcher monitoring
 watch_path = ["src", "public"]
 
@@ -30,7 +32,7 @@ watch_path = ["src", "public"]
 [web.resource]
 
 # CSS style file
-style = ["tailwind.css", "/src/base.css", "/public/tailwind.css"]
+style = ["tailwind.css", "/src/base.css"]
 
 # Javascript code file
 script = []
@@ -40,3 +42,6 @@ script = []
 # Javascript code file
 # serve: [dev-server] only
 script = []
+
+[[web.proxy]]
+backend = "http://localhost:8000/api/"

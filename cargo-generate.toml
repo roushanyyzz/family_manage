@@ -1,0 +1,10 @@
+[template]
+exclude = ["public/favicon.ico"]
+
+[values]
+dioxus_version = "0.4"
+
+[placeholders]
+platform = "web"
+styling = "Tailwind"
+router = true
